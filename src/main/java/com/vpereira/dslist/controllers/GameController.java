@@ -21,13 +21,13 @@ public class GameController {
 	
 	@GetMapping(value = "/{id}")
 	public GameDTO findById(@PathVariable Long id) {
-		GameDTO gameDTO = gameService.findById(id);
-		return gameDTO;
+		GameDTO result = gameService.findById(id);
+		return result;
 	}
 	
 	@GetMapping
 	public List<GameMinDTO> findAll() {
-		List<GameMinDTO> games = gameService.findAll();
-		return games;
+		List<GameMinDTO> result = gameService.findAll();
+		return result;
 	}
 }
